@@ -21,11 +21,21 @@ class LongLines {
 }
 
 object ClosuresAndFunctions {
-  val filename = "/Users/dimi/Documents/scala/Scala/ScalaBookExamples/src/de/rwth/ClosuresAndFunctions.scala"
+  val filename = "/Users/dimi/Documents/scala/Scala/ScalaBookExamples"
+                 "/src/de/rwth/ClosuresAndFunctions.scala"
   val processor = new LongLines
-  def test1() {
-    for (line <- processor.processFile(filename, 40))
-    println (line.trim)
+  def closureExample() {
+    val someNumbers = Array(1,2,3,4,5,6,7,-1,-2)
+    var sum = 1
+    someNumbers.foreach(sum += _)
+    println(sum)
+    sum = 2
+    someNumbers.foreach(sum += _)
+    println(sum)
+  }
+
+  def namedAttriuteExample() {
+
   }
   
 }
